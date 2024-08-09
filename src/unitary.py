@@ -1,6 +1,10 @@
-# This module contains the set of unitary ansatze 
-# that will be used to benchmark the performances 
-# of Quantum Convolutional Neural Network (QCNN) in QCUnet.ipynb module
+
+# This module contains the set of unitary ansatze of Quantum Convolutional Neural Network (QCNN) 
+# from https://github.com/takh04/QCNN/tree/main?tab=readme-ov-file 
+# under GNU General Public License v3.0
+#
+# Copyright (C) 2017 https://github.com/takh04  
+
 
 import pennylane as qml
 import numpy as np
@@ -99,7 +103,7 @@ def U_SU4(params, wires): # 15 params
 # Pooling Layer
 
 def Pooling_ansatz1(params, wires): #2 params
-    print(params)
+    
     qml.CRZ(params[0], wires=[wires[0], wires[1]])
     qml.PauliX(wires=wires[0])
     qml.CRX(params[1], wires=[wires[0], wires[1]])
@@ -119,6 +123,5 @@ unitaries_params_dict = {k: v for k, v in zip(Unitaries, U_num_params)}
 
 def initialize_params(unitary , unitaries_params_dict = unitaries_params_dict): 
     total_params = unitaries_params_dict[unitary] * 3 + 2 * 3
-    print(total_params)
     params = np.random.randn(total_params)
     return params

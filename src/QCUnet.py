@@ -119,7 +119,6 @@ class QuantConv(nn.Module):
             # self.weights = nn.Parameter(
             # torch.from_numpy(np.random.uniform(
             #     0, np.pi, self.n_qubits)))
-        print('params size', self.weights.shape )
     def forward(self, input):
         expectation_z = quanv(input, self.weights, window_size=self.window_size, stride = self.stride, unitary= self.unitary)
         x = torch.tensor(expectation_z)
@@ -216,15 +215,12 @@ class QCUNet(nn.Module):
             x4 = self.down3(x3)
             x5 = self.down4(x4)
             x6 = self.down5(x5)
-            print('x6 shape', x6.shape)
             if self.Qbottleneck: 
                 # Apply QCNN layer in the bottleneck
                 batch_size, channels, height, width = x6.shape
                 x6_flatten = torch.flatten(x6, start_dim=2)  # Flatten the spatial dimensions (except batch size)
-                print(f"x6_flatten shape: {x6_flatten.shape}")  # Debug statement
                 qcnn_output = self.qcnn(x6_flatten)
                 x6 = qcnn_output.view(batch_size, 512, height, width)  # Adjust as per actual output dimensions
-                print(f"qcnn_output reshaped: {x6.shape}")  # Debug statement
                 
             x = self.up1(x6, x5)
             x = self.up2(x, x4)

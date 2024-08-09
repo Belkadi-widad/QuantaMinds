@@ -1,3 +1,11 @@
+# from
+#  https://github.com/sfinos316/Methane-Plume-Segmentation/tree/main 
+# under GNU General Public License v3.0
+#
+# Copyright (C) 2017 https://github.com/sfinos316 
+
+# we also modified it to suit us.. 
+
 import os
 import numpy as np
 import torch

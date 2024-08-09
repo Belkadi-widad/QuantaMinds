@@ -1,8 +1,8 @@
 #s U-Net implementation is available from
-# https://github.com/milesial/Pytorch-UNet
+# https://github.com/milesial/Pytorch-UNet and https://github.com/sfinos316/Methane-Plume-Segmentation/tree/main 
 # under GNU General Public License v3.0
 #
-# Copyright (C) 2017 https://github.com/milesial
+# Copyright (C) 2017 https://github.com/milesial and https://github.com/sfinos316 
 
 import torch
 import torch.nn as nn
@@ -102,36 +102,15 @@ class UNet(nn.Module):
         self.outc = OutConv(64, n_classes)
 
     def forward(self, x):
-        print( 'Input shape' , x.shape)
         x1 = self.inc(x)  
-        print( 'inc shape' , x1.shape)
-
         x2 = self.down1(x1)
-        print( 'down1 shape' , x2.shape)
-
         x3 = self.down2(x2)
-        print( 'down2 shape' , x3.shape)
-
         x4 = self.down3(x3)
-        print( 'down3 shape' , x4.shape)
-
         x5 = self.down4(x4)
-        print( 'down4 shape' , x5.shape)
-
         x = self.up1(x5, x4)
-        print( 'up1 shape' , x.shape)
-
         x = self.up2(x, x3)
-        print( 'up2 shape' , x.shape)
-
         x = self.up3(x, x2)
-        print( 'up3 shape' , x.shape)
-
-        print( 'x and x1 shapes' , x.shape ,  x1.shape)
         x = self.up4(x, x1)
-        print( 'up4 shape' , x.shape)
-
         logits = self.outc(x)
-        print( 'output shapes' , logits.shape)
 
         return logits

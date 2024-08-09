@@ -31,7 +31,6 @@ class QBottleneck(nn.Module):
             params= initialize_params(unitary)
             self.params = nn.Parameter(torch.from_numpy(params))
             # self.params = torch.nn.Parameter(torch.randn(self.n_qubits))
-        print('params size', self.params.shape )
         
     def q_circuit(self, inputs, params):
         ## embeddings
@@ -60,7 +59,6 @@ class QBottleneck(nn.Module):
         qcnn_output = np.array(qcnn_output)  # Convert list of arrays to a NumPy array
         qcnn_output = qcnn_output.reshape(batch_size, num_channels, -1)  # Reshape correctly
         qcnn_output = torch.tensor(qcnn_output, device=x.device, dtype=torch.float32)  # Convert back to PyTorch tensor
-        print(f"QCNN output shape: {qcnn_output.shape}") 
         return qcnn_output
 
 
@@ -94,10 +92,8 @@ class UNetWithQBottleNeck(nn.Module):
         # Apply QCNN layer in the bottleneck
         batch_size, channels, height, width = x5.shape
         x5_flatten = torch.flatten(x5, start_dim=2)  # Flatten the spatial dimensions (except batch size)
-        print(f"x5_flatten shape: {x5_flatten.shape}")  # Debug statement
         qcnn_output = self.qcnn(x5_flatten)
         qcnn_output = qcnn_output.view(batch_size, 512, height // 2, width // 2)  # Adjust as per actual output dimensions
-        print(f"qcnn_output reshaped: {qcnn_output.shape}")  # Debug statement
 
         x = self.up1(qcnn_output, x4)
         x = self.up2(x, x3)

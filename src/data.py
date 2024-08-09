@@ -52,8 +52,7 @@ class PlumeSegmentationDataset():
         # turn lists into arrays
         self.imgfiles = np.array(self.imgfiles)
         self.segfiles = np.array(self.segfiles)
-        print(self.imgfiles.shape)
-        print(self.segfiles.shape)
+        
         
     def __len__(self):
         """Returns length of data set."""
