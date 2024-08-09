@@ -40,23 +40,23 @@ Ensure your repository does not contain any personal or team tokens/access infor
 
 Team Member 1:
 
-- Full Name:
-- Womanium Program Enrollment ID (see Welcome Email, format- WQ24-xxxxxxxxxxxxxxx):
+- Full Name: Widad Hassina Belkadi
+- Womanium Program Enrollment ID (see Welcome Email, format- WQ24-xxxxxxxxxxxxxxx): WQ24-OtLEQXfn7uFF7it
 
 Team Member 2:
 
-- Full Name:
-- Womanium Program Enrollment ID (see Welcome Email, format- WQ24-xxxxxxxxxxxxxxx):
+- Full Name: Rihab Hoceini
+- Womanium Program Enrollment ID (see Welcome Email, format- WQ24-xxxxxxxxxxxxxxx): WQ24-KPzWzHDZHFx44iX
 
 Team Member 3:
 
-- Full Name:
-- Womanium Program Enrollment ID (see Welcome Email, format- WQ24-xxxxxxxxxxxxxxx):
+- Full Name: Radhia Djebrouni
+- Womanium Program Enrollment ID (see Welcome Email, format- WQ24-xxxxxxxxxxxxxxx): WQ24-1GmcuhBW28GqKvj
 
 Team Member 4:
 
-- Full Name:
-- Womanium Program Enrollment ID (see Welcome Email, format- WQ24-xxxxxxxxxxxxxxx):
+- Full Name: saif Nazzim asi
+- Womanium Program Enrollment ID (see Welcome Email, format- WQ24-xxxxxxxxxxxxxxx): WQ24-gIrIRKL5nfC9MOl
 
 ### Project Solution:
 
@@ -76,11 +76,7 @@ The quantum QC-Unet model is our proposed architetcure. However, we used some co
 
 The link to [the google docs report](https://docs.google.com/document/d/1Dw4HXiROUrcbNnedyXjFgDRoc4D8Abdis47zs3Eb7dA)
 
-1. Overview of the application:
-
-![Application]()
-
-1. Important Note about the Data:
+**1. Important Note about the Data:**
 
 Due to connexion issues and the big volume of the data we couldn't upload the data, but you can download it from here : [drive link](https://drive.google.com/drive/folders/1hm1VxLvFvtSizUXlWb5coSCimAT1roLH) or from [github link](https://github.com/sfinos316/Methane-Plume-Segmentation/tree/main/data) the folder must be placed in 'src/' and have the name data.
 
@@ -94,7 +90,17 @@ Each dataset containing :
 
 `tci_tiles/` : true color tiles
 
-3. Code Content:
+**2. Overview of the QCU-net architetcure**
+
+![QC-Unet Architetcure](./src/assets/GlobalQCUnet.png)
+
+**3. Overview of the application:**
+
+![Application](./src/assets/application.png)
+
+![Application](./src/assets/application1.png)
+
+**4. Code Content:**
 
 The full code and data are available in this respository and structed as follows:
 
@@ -122,5 +128,9 @@ The full code and data are available in this respository and structed as follows
 - in the '/docs' folder contains the report and the PPT presentation.
 
 ### Project Presentation Deck:
+
+[Report pdf](/docs/report.pdf)
+
+[Report docs](https://docs.google.com/document/d/1Dw4HXiROUrcbNnedyXjFgDRoc4D8Abdis47zs3Eb7dA)
 
 [PPT Presentation](docs/presentation.pdf).
