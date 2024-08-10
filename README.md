@@ -125,12 +125,13 @@ The full code and data are available in this respository and structed as follows
   - The folder subdata: contains the files containing the image names that we took in our subdataset.
 
 - in the '/app' folder you will find the code related to the demo app.
-- in the '/docs' folder contains the report and the PPT presentation.
 
 ### Project Presentation Deck:
 
-[Report pdf](/docs/report.pdf)
+[PPT Presentation slides](https://docs.google.com/presentation/d/1REZs52omkWnfaxQTyJs6VvPOhEX4L3rshtrgaKsRbt8/edit?pli=1#slide=id.g25703cb3a7b_0_64).
+
+[PPT Presentation PDF](https://drive.google.com/file/d/1-O9vmn9CDanobpNWfwIq0vYG3Z0NenVL/view?usp=drive_link).
+
+[Report pdf](https://drive.google.com/file/d/1rXGJMoyUYmdu_G9FX5QVfDrSvaZ3LJmV/view?usp=drive_link)
 
 [Report docs](https://docs.google.com/document/d/1Dw4HXiROUrcbNnedyXjFgDRoc4D8Abdis47zs3Eb7dA)
-
-[PPT Presentation](docs/presentation.pdf).
