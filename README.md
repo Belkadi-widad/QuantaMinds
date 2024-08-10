@@ -63,7 +63,7 @@ Team Member 4:
 _Hybrid Quantum Classical U-net for Methane leaks detection_.
 
 This project was developed as part of the Womenium AI+Quantum program. We selected the Quantum-AI-for-Climate project, focusing on leveraging quantum technologies and artificial intelligence to detect methane leaks and plumes. We are proud to announce the successful completion of the four designated tasks.
-The report is in [Report](docs/report.pdf). Below, you will find the detailed descriptions for each task presented in the report in detail:
+The report is in [Report](https://drive.google.com/file/d/1rXGJMoyUYmdu_G9FX5QVfDrSvaZ3LJmV/view). Below, you will find the detailed descriptions for each task presented in the report in detail:
 
 - Task A: This task involves a statement of the problem and background information, detailed in Chapter 1: Background.
 - Task B: This task includes a brief overview of the background research and literature reviews conducted by our team, presented in Chapter 2: Literature Review. Additionally, Chapter 3: Materials outlines the resources we utilized to develop our solution.
