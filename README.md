@@ -124,7 +124,7 @@ The full code and data are available in this respository and structed as follows
   - The folder results: contains the dataframes, containing the evaluation metrics for each model or the architetcures.
   - The folder subdata: contains the files containing the image names that we took in our subdataset.
 
-- in the '/app' folder you will find the code related to the demo app.
+- in the '/app' folder you will find the code related to the demo app
 
 ### Project Presentation Deck:
 
